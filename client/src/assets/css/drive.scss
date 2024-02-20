@@ -1,0 +1,91 @@
+.drive {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .sidebar {
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #f5f5f5;
+
+        padding: 0 30px;
+        padding-top: 30px;
+        .leftheader {
+            display: flex;
+            justify-content: center;
+            .logo {
+                padding-right: 10px;
+                display: inline-block;
+                vertical-align: bottom;
+                transform: translateY(3px);
+            }
+            .title {
+                height: 30px;
+                line-height: 35px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        .user {
+            display: flex;
+            flex-direction: column; /* 添加此行以使子元素垂直排列 */
+            justify-content: center; /* 添加此行以使子元素水平居中 */
+            align-items: center; /* 添加此行以使子元素垂直居中 */
+
+            margin: 30px;
+            .userImg {
+                display: inline-block;
+            }
+            .username {
+                display: inline-block;
+                margin-top: 5px;
+                font-size: 16px;
+            }
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                padding: 10px;
+                padding-left: 20px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                color: #555;
+                font-size: 16px;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+            .active {
+                background-color: #ddd;
+            }
+        }
+    }
+    .content {
+        width: 100%;
+        height: 100%;
+        margin-left: 300px;
+        padding: 50px;
+        .right-header {
+            display: flex;
+            justify-content: space-between;
+            .pagename {
+                margin-left: 15px;
+                width: 100px;
+                height: 40px;
+            }
+            .upload {
+                width: 32px;
+                height: 32px;
+                margin-right: 20px;
+            }
+        }
+        .contentview {
+        }
+    }
+}
